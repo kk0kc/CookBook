@@ -10,7 +10,7 @@
         android:id="@+id/ingredients_cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -34,10 +34,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/ingredient_imageView"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
                 app:layout_constraintBottom_toBottomOf="@+id/white_background"
                 app:layout_constraintEnd_toEndOf="@+id/white_background"
                 app:layout_constraintStart_toStartOf="@+id/white_background"
@@ -51,11 +52,10 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="12dp"
-                android:fontFamily="@font/courgette"
+                android:fontFamily="@font/gothic_a1_thin"
                 android:text="Name"
                 android:textColor="@color/titleColor"
                 android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/white_background"
                 app:layout_constraintTop_toTopOf="parent" />

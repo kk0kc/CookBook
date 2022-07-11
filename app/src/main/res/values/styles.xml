@@ -52,4 +52,9 @@
         <item name="itemTextColor">@color/bottom_nav_view_item_color</item>
     </style>
 
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50dp</item>
+    </style>
+
 </resources>

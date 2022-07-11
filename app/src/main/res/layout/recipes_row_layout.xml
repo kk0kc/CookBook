@@ -22,7 +22,7 @@
             android:id="@+id/row_cardView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -35,12 +35,14 @@
                 android:layout_height="match_parent"
                 android:background="@color/cardBackgroundColor">
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/recipe_imageView"
                     android:layout_width="200dp"
                     android:layout_height="0dp"
                     android:scaleType="centerCrop"
                     loadImageFromUrl="@{result.image}"
+                    app:shapeAppearanceOverlay="@style/roundedImageView"
+                    android:padding="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -54,12 +56,12 @@
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="12dp"
                     android:ellipsize="end"
-                    android:fontFamily="@font/courgette"
+                    android:fontFamily="@font/gothic_a1_thin"
                     android:maxLines="2"
                     android:text="@{result.title}"
                     android:textColor="@color/titleColor"
                     android:textSize="20sp"
-                    android:textStyle="bold"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toEndOf="@+id/recipe_imageView"
