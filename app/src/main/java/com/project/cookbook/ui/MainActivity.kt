@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.recipesFragment,
                 R.id.favouriteRecipesFragment,
-                R.id.foodJokeFragment
             )
         )
 
