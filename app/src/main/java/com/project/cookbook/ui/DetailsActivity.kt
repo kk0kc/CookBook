@@ -82,7 +82,7 @@ class DetailsActivity : AppCompatActivity() {
     }
 
     private fun checkSavedRecipes(menuItem: MenuItem) {
-        mainViewModel.readFavouriteRecipes.observe(this, { favouritesEntity ->
+        mainViewModel.readFavouriteRecipes.observe(this) { favouritesEntity ->
             try {
                 for (savedRecipe in favouritesEntity) {
                     if (savedRecipe.result.id == args.result.id) {
@@ -97,7 +97,7 @@ class DetailsActivity : AppCompatActivity() {
                 Log.d("DetailsActivity.", e.message.toString())
             }
 
-        })
+        }
     }
 
     private fun saveToFavourites(item: MenuItem) {

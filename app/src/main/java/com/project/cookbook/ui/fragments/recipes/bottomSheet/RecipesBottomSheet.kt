@@ -42,13 +42,13 @@ class RecipesBottomSheet : BottomSheetDialogFragment() {
         // Inflate the layout for this fragment
         val mView = inflater.inflate(R.layout.recipes_bottom_sheet, container, false)
 
-        recipesViewModel.readMealAndDietType.asLiveData().observe(viewLifecycleOwner, { value ->
+        recipesViewModel.readMealAndDietType.asLiveData().observe(viewLifecycleOwner) { value ->
             mealTypeChip = value.selectedMealType
             dietTypeChip = value.selectedDietType
             updateChip(value.selectedMealTypeId, mView.mealType_chipGroup)
             updateChip(value.selectedDietTypeId, mView.dietType_chipGroup)
 
-        })
+        }
 
         mView.mealType_chipGroup.setOnCheckedChangeListener { group, selectedChipId ->
             val chip = group.findViewById<Chip>(selectedChipId)

@@ -2,7 +2,6 @@ package com.project.cookbook.data
 
 import com.project.cookbook.data.database.RecipeDao
 import com.project.cookbook.data.database.entities.FavouritesEntity
-import com.project.cookbook.data.database.entities.FoodJokeEntity
 import com.project.cookbook.data.database.entities.RecipesEntity
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
@@ -19,9 +18,7 @@ class LocalDataSource @Inject constructor(
         return recipeDao.readFavouriteRecipes()
     }
 
-    fun readFoodJoke(): Flow<List<FoodJokeEntity>> {
-        return recipeDao.readFoodJoke()
-    }
+
 
     suspend fun insertRecipes(recipesEntity: RecipesEntity) {
         recipeDao.insertRecipes(recipesEntity)
@@ -31,9 +28,6 @@ class LocalDataSource @Inject constructor(
         recipeDao.insertFavouriteRecipe(favouritesEntity)
     }
 
-    suspend fun insertFoodJoke(foodJokeEntity: FoodJokeEntity) {
-        recipeDao.insertFoodJoke(foodJokeEntity)
-    }
 
     suspend fun deleteFavouriteRecipe(favouritesEntity: FavouritesEntity) {
         recipeDao.deleteFavouriteRecipe(favouritesEntity)
